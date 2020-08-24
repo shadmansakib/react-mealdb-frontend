@@ -1,0 +1,43 @@
+.section-name {
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+  }
+  
+  .cuisine-list {
+    display: inline-block;
+    margin: auto 15px;
+  }
+  
+  .cuisine-name {
+    background: #3f4142;
+    float: left;
+    height: 2rem;
+    padding: 0px 5px;
+    margin: 2px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .cuisine-name:hover {
+    background: #6a6c6d;
+  }
+  
+  .cuisine-name p {
+    all: unset;
+    vertical-align: middle;
+    color: white;
+    font-size: 0.8rem;
+  }
+
+
+  @media(min-width: 769px){
+    .cuisine-list {
+      margin: unset;
+    }
+
+    .section-name {
+        margin-left: unset;
+    }
+  }

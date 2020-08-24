@@ -1,0 +1,25 @@
+.toolbar__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 50px;
+    width: 100%;
+    background-color: #282c34;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+  }
+  
+  @media(min-width: 769px){
+    .toolbar__nav {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .toolbar__spacer {
+      /* flex: 1; */
+      flex: 0.9;
+    }
+  }

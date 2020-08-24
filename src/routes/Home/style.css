@@ -1,10 +1,3 @@
-.App {
-  display: flex;
-}
-.content-area {
-  margin-top: 50px;
-  width: 100%;
-}
 
 .featured-area {
   display: flex;
@@ -15,18 +8,8 @@
   flex: 2;
 }
 
-/* for desktop */
 @media(min-width: 769px){
-  .toolbar__spacer {
-    flex: 1;
-  }
-
-  .content-area {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 70px;
-  }
-
+    
   .featured-area {
     flex-direction: row;
   }

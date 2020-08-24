@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect } from 'react';
+import { useSelector } from "react-redux";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import { fetchRandomMeal } from "./store/actions/randomMealAction";
+
+import Toolbar from "./components/Toolbar";
+import Home from './routes/Home';
+import Details from './routes/Details';
+import MealList from './routes/MealList';
+
 import './App.css';
 
-function App() {
+
+export default function App() {
+  const { randomMeal } = useSelector(state => state.randomMeal);
+
+  useEffect(() => {
+    if (!randomMeal) fetchRandomMeal();
+  }, [randomMeal]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Toolbar />
+        <div className="content-area">
+
+          <Switch>
+            <Route exact path='/category/:category' component={MealList} />
+            <Route exact path='/cuisine/:cuisine' component={MealList} />
+            <Route exact path='/:id' component={Details} />
+            <Route exact path='/' component={Home} />
+          </Switch>
+        </div>
+      </div>
+    </BrowserRouter>
   );
 }
-
-export default App;

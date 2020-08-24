@@ -1,0 +1,30 @@
+.image-overlay {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.overlay-image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay-content {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.25s;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+.overlay-content:hover {
+    background: rgba(0, 0, 0, 0.5);
+    color: wheat;
+}

@@ -1,0 +1,15 @@
+.toolbar__logo {
+  font-size: calc(10px + 0.5vmin);
+}
+
+.toolbar__logo:hover,
+.toolbar__logo:active {
+  color: burlywood;
+  transition: color 0.2s;
+}
+
+@media(min-width: 769px){
+  .toolbar__logo {
+    margin-left: 15px;
+  }
+}

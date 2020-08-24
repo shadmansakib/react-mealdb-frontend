@@ -1,0 +1,31 @@
+.meal-list {
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.meal-list h1 {
+    align-self: center;
+}
+
+.meals {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5px;
+    row-gap: 2px;
+}
+
+@media(min-width: 550px){
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}
+
+@media(min-width: 769px){
+    .meals {
+        grid-template-columns: repeat(4, 1fr);
+        column-gap: 10px;
+        row-gap: 10px;
+    }
+}

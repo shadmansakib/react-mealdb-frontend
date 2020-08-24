@@ -1,0 +1,29 @@
+.banner {
+  display: flex;
+  height: 350px;
+  margin: 0px auto;
+  border-radius: 10px 10px 0px 0px;
+  background: pink;
+}
+
+.overlay-text {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  line-height: unset;
+}
+
+.overlay-text h2 {
+  all: unset;
+  display: block;
+  font-weight: bold;
+  font-size: calc(12px + 1.6vmin);
+}
+
+.overlay-text p {
+all: unset;
+display: block;
+margin: 10px auto;
+font-size: calc(10px + 1.6vmin);
+line-height: 1em;
+}

@@ -1,0 +1,27 @@
+.category-area {}
+  
+.category-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  column-gap: 5px;
+  row-gap: 2px;
+}
+
+/* medium screen */
+@media(min-width: 550px){
+  .category-cards {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}
+
+/* large screen */
+@media(min-width: 769px){
+  .category-cards {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 10px;
+  }
+}

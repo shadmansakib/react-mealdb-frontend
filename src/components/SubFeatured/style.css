@@ -1,0 +1,25 @@
+.featured-recipe-box {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background: #878885;
+    height: 150px;
+    text-align: center;
+}
+
+.featured-recipe-box:first-child {}
+
+.featured-recipe-box:last-child {}
+
+.featured-recipe-box img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+}
+
+.featured-recipe-box h2 {
+    all: unset;
+    font-size: 1rem;
+    padding: 5px;
+    color: white;
+}

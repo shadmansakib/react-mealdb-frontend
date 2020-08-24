@@ -1,0 +1,40 @@
+.featured-more {
+    flex: 1;
+    background: white;
+  }
+  
+  .featured-more h2 {
+    padding: 10px;
+    line-height: 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    margin: 0px;
+    color: black;
+  }
+  
+  .subfeatured-boxes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.2em;
+    margin-top: 3px;
+  }
+
+   /* for desktop */
+   @media(min-width: 769px){
+    .featured-more {
+      flex: 1;
+      background: #4e4e4e;
+    }
+    
+    .featured-more h2 {
+      line-height: 1.5rem;
+      font-size: 1rem;
+      margin: 0px;
+      color: white;
+    }
+
+    .subfeatured-boxes {
+      display: grid;
+
+    }
+  }
