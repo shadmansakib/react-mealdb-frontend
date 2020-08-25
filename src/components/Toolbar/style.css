@@ -12,14 +12,20 @@
     color: white;
   }
   
+  .toolbar_padding {
+    all: unset;
+  }
+
   @media(min-width: 769px){
-    .toolbar__nav {
-      padding-left: 50px;
-      padding-right: 50px;
+    .toolbar__spacer {
+      flex: 1;
     }
 
-    .toolbar__spacer {
-      /* flex: 1; */
-      flex: 0.9;
+    .toolbar_padding {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      padding: 0px 50px;
+      align-items: center;
     }
   }

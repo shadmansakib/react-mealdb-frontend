@@ -10,15 +10,18 @@ import './style.css';
 
 
 export default function Toolbar() {
-    const [drawerOpen, toggleDrawerState] = useState(false);
-    const dropShadow = drawerOpen ? <DropShadow onClick={() => toggleDrawerState(!drawerOpen)} /> : null;
+    const [drawerOpen, setDrawerState] = useState(false);
+    const dropShadow = drawerOpen ? <DropShadow onClick={() => setDrawerState(false)} /> : null;
+
 
     return (
         <nav className="toolbar__nav">
-            <ToggleButton onClick={() => toggleDrawerState(!drawerOpen)} />
-            <Logo />
-            <div className="toolbar__spacer" />
-            <ToolbarMenu displayState={drawerOpen} onClickItem={() => toggleDrawerState(!drawerOpen)} />
+            <ToggleButton onClick={() => setDrawerState(true)} />
+            <div className="toolbar_padding">
+                <Logo />
+                <div className="toolbar__spacer" />
+                <ToolbarMenu displayState={drawerOpen} onClickItem={() => setDrawerState(false)} />
+            </div>
             {dropShadow}
         </nav>
     )

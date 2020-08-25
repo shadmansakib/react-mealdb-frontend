@@ -8,7 +8,7 @@ export default function Logo() {
     return (
         <div className="toolbar__logo">
             <Link to="/">
-                <h2>Recipe App</h2>
+                <h2>The Food Factory</h2>
             </Link>
         </div>
     )
