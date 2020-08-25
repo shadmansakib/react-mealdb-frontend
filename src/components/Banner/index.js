@@ -1,14 +1,22 @@
 
-import React from 'react'
-import { useSelector } from "react-redux";
+import React, { useEffect } from 'react'
+import { useSelector, useDispatch } from "react-redux";
 
 import ImageOverlay from '../ImageOverlay';
+import { fetchRandomMeal } from "../../store/actions/randomMealAction";
 
 import imgPlaceholer from '../../assets/images/placeholder-simpsons.jpg';
 import './style.css';
 
 export default function Banner() {
+    const dispatch = useDispatch();
+
     const { meal } = useSelector(state => state.randomMeal);
+
+    useEffect(() => {
+        if (!meal) dispatch(fetchRandomMeal());
+    }, [meal]);
+
     const { strMeal, strCategory, strArea, strMealThumb } = meal ? meal : '';
     const imgSrc = strMealThumb ? strMealThumb : imgPlaceholer;
 

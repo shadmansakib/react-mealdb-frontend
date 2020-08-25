@@ -1,8 +1,5 @@
-import React, { useEffect } from 'react';
-import { useSelector } from "react-redux";
+import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-
-import { fetchRandomMeal } from "./store/actions/randomMealAction";
 
 import Toolbar from "./components/Toolbar";
 import Home from './routes/Home';
@@ -13,12 +10,6 @@ import './App.css';
 
 
 export default function App() {
-  const { randomMeal } = useSelector(state => state.randomMeal);
-
-  useEffect(() => {
-    if (!randomMeal) fetchRandomMeal();
-  }, [randomMeal]);
-
   return (
     <BrowserRouter>
       <div className="App">

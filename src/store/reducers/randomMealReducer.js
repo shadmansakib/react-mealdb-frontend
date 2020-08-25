@@ -1,9 +1,7 @@
 
 import { FETCH_RANDOM_MEAL } from "../actions/actionTypes";
 
-const initialState = {
-    // randomMeal: null,
-};
+const initialState = {};
 
 export default function randomMealReducer(state = initialState, action) {
     switch (action.type) {
